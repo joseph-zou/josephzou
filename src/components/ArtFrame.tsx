@@ -68,7 +68,7 @@ const ArtFrame: React.FC<ArtFrameProps> = ({
     imageRef.current.getWorldDirection(direction); // normalized
 
     // Move the camera back from the image by a fixed distance (e.g., 4 units)
-    const cameraPos = target.clone().add(direction.multiplyScalar(1));
+    const cameraPos = target.clone().add(direction.multiplyScalar(2.5));
 
     cameraRef.current.setLookAt(
       ...cameraPos.toArray(),
