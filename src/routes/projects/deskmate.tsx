@@ -13,11 +13,12 @@ function RouteComponent() {
     { id: "universal-overview", title: "Overview" },
     { id: "technical-features", title: "Technical Features" },
     { id: "conclusion", title: "A Few Thoughts" },
+    { id: "next-steps", title: "Next Steps" },
   ];
   const scrollToSection = useScrollToSection();
   return (
-    <div className="flex flex-row mt-10 px-5 pb-20 bg-background md:pl-10 md:pr-20 md:gap-x-10">
-      <div className="hidden md:block w-auto mr-2">
+    <div className="project-container">
+      <div className="navigator">
         <SectionNavigator sections={sections} handleClick={scrollToSection} />
       </div>
       <div className="project">
@@ -54,7 +55,7 @@ function RouteComponent() {
           </h2>
         </div>
         <div className="project-text" id="introduction">
-          <div className="project-section mb-5 w-full">
+          <div className="project-section">
             <p className="project-sub-subheading">Introduction</p>
             <p className="project-sub-subheading-paragraph flex w-full ">
               I often find myself with numerous chrome tabs from dictionary
@@ -63,7 +64,7 @@ function RouteComponent() {
               background.
             </p>
           </div>
-          <div className="project-section mb-5">
+          <div className="project-section">
             <p className="project-sub-subheading" id="solution">
               Solution
             </p>
@@ -72,10 +73,11 @@ function RouteComponent() {
               allergies, I created digital copies of them to house all my tools.
               They are able to walk around the edges of my screen but are small
               enough to not be intrustive. I've also created a script to run on
-              start up to run the program so they are always there.
+              start up to run the program so they are always there. Not a day
+              goes by I don't use one of the tools.
             </p>
           </div>
-          <div className="project-section mb-5">
+          <div className="project-section">
             <p className="project-sub-subheading" id="video-demonstration">
               Video Demonstration
             </p>
@@ -92,14 +94,13 @@ function RouteComponent() {
             <p className="project-sub-subheading-paragraph text-center">
               Check out this quick 1-minute video that showcases the solution.
             </p>
-            <br />
           </div>
         </div>
         <div className="project-header" id="technical-features">
           <h2 className="project-heading">Technical Features</h2>
         </div>
         <div className="project-text" id="technical-features">
-          <div className="project-section mb-5">
+          <div className="project-section">
             <p className="project-sub-subheading">
               State and Singleton Design Pattern
             </p>
@@ -111,7 +112,7 @@ function RouteComponent() {
               the app state's data.
             </p>
           </div>
-          <div className="project-section mb-5">
+          <div className="project-section">
             <p className="project-sub-subheading">
               Sprite logic / Transisition manager / Event generator
             </p>
@@ -146,7 +147,7 @@ function RouteComponent() {
               own exit logic in its abstract base class.
             </p>
           </div>
-          <div className="project-section mb-5">
+          <div className="project-section">
             <p className="project-sub-subheading">User Interface Widgets</p>
             <p className="project-sub-subheading-paragraph">
               I started to add tools to the sprite, for weather and dictionary I
@@ -159,19 +160,11 @@ function RouteComponent() {
           <h2 className="project-heading">A Few Thoughts..</h2>
         </div>
         <div className="project-text" id="conclusion">
-          <ul className="list-disc ml-2 md:ml-10 text-p">
-            <li>
-              <p className="project-sub-subheading-paragraph">
-                This was a quick build so not all the features I want are there.
-                I intend to eventually add kanban style task manager, more
-                interactivity like draging the sprite and other tools. Also
-                revamp the UI to make it more visually attractive.
-              </p>
-            </li>
+          <ul className="project-unordered-list">
             <li>
               <p className="project-sub-subheading-paragraph">
                 Lately, I've become more self conscious of the quality of code I
-                wrote, using the{" "}
+                wrote, I've been reading up on design patterns from{" "}
                 <a
                   className="text-blue-500"
                   href="https://refactoring.guru/design-patterns"
@@ -179,11 +172,28 @@ function RouteComponent() {
                   rel="noreferrer"
                 >
                   Design Guru
-                </a>{" "}
-                I'm able to see elegant solutions to existing problems. I hope
-                to build more projects that integrate different patterns.
+                </a>
+                . I hope to build more projects that integrate different
+                patterns.
               </p>
             </li>
+          </ul>
+        </div>
+        <div className="project-header" id="maps-header">
+          <h2 className="project-heading">Next Steps</h2>
+        </div>
+        <div className="project-text" id="conclusion">
+          <ul className="project-unordered-list">
+            <li>
+              Need a way to spawn multiple sprite instances in one
+              program—sharing tools and resources to keep it lightweight.
+              Currently have to run the multiple instances of the program, was
+              not expecting a second cat (Lint) right as when this project was
+              finishing 😆.
+            </li>
+            <li>Add kanban style task manager</li>
+            <li>Add dragging interaction with gravity</li>
+            <li>Revamp UI</li>
           </ul>
         </div>
       </div>

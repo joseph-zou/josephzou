@@ -24,10 +24,17 @@ const About = () => {
             <span className="font-bold"> Vanderbilt University</span>, where I
             studied
             <span className="font-bold"> Computer Science</span>. I'm passionate
-            about developing practical, user-focused tools that simplify
-            everyday tasks — and occasionally experimenting with more
-            unconventional ideas. Thank you for visiting — I appreciate your
-            time!
+            about developing practical and useful software — and occasionally
+            experimenting with more unconventional ideas.
+            <br />
+            <br />I love building projects and find the greatest joy in
+            continuously improving them—adding new features, fixing pain points,
+            and evolving something that’s already functional. To me, no project
+            is ever truly finished; that’s why every writeup has a "next steps"
+            of ideas I plan to implement as I go.
+            <br />
+            <br />
+            Thank you for visiting — I appreciate your time!
           </p>
           <div className="flex gap-x-4 md:mt-10 mt-3">
             <a

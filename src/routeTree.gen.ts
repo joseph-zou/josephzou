@@ -13,6 +13,7 @@ import { Route as ResumeRouteImport } from './routes/resume'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProjectsIndexRouteImport } from './routes/projects/index'
+import { Route as ProjectsPersonalSiteRouteImport } from './routes/projects/personal-site'
 import { Route as ProjectsM2mRouteImport } from './routes/projects/m2m'
 import { Route as ProjectsDeskmateRouteImport } from './routes/projects/deskmate'
 
@@ -36,6 +37,11 @@ const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
   path: '/projects/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsPersonalSiteRoute = ProjectsPersonalSiteRouteImport.update({
+  id: '/projects/personal-site',
+  path: '/projects/personal-site',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsM2mRoute = ProjectsM2mRouteImport.update({
   id: '/projects/m2m',
   path: '/projects/m2m',
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/resume': typeof ResumeRoute
   '/projects/deskmate': typeof ProjectsDeskmateRoute
   '/projects/m2m': typeof ProjectsM2mRoute
+  '/projects/personal-site': typeof ProjectsPersonalSiteRoute
   '/projects': typeof ProjectsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/resume': typeof ResumeRoute
   '/projects/deskmate': typeof ProjectsDeskmateRoute
   '/projects/m2m': typeof ProjectsM2mRoute
+  '/projects/personal-site': typeof ProjectsPersonalSiteRoute
   '/projects': typeof ProjectsIndexRoute
 }
 export interface FileRoutesById {
@@ -70,6 +78,7 @@ export interface FileRoutesById {
   '/resume': typeof ResumeRoute
   '/projects/deskmate': typeof ProjectsDeskmateRoute
   '/projects/m2m': typeof ProjectsM2mRoute
+  '/projects/personal-site': typeof ProjectsPersonalSiteRoute
   '/projects/': typeof ProjectsIndexRoute
 }
 export interface FileRouteTypes {
@@ -80,6 +89,7 @@ export interface FileRouteTypes {
     | '/resume'
     | '/projects/deskmate'
     | '/projects/m2m'
+    | '/projects/personal-site'
     | '/projects'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -88,6 +98,7 @@ export interface FileRouteTypes {
     | '/resume'
     | '/projects/deskmate'
     | '/projects/m2m'
+    | '/projects/personal-site'
     | '/projects'
   id:
     | '__root__'
@@ -96,6 +107,7 @@ export interface FileRouteTypes {
     | '/resume'
     | '/projects/deskmate'
     | '/projects/m2m'
+    | '/projects/personal-site'
     | '/projects/'
   fileRoutesById: FileRoutesById
 }
@@ -105,6 +117,7 @@ export interface RootRouteChildren {
   ResumeRoute: typeof ResumeRoute
   ProjectsDeskmateRoute: typeof ProjectsDeskmateRoute
   ProjectsM2mRoute: typeof ProjectsM2mRoute
+  ProjectsPersonalSiteRoute: typeof ProjectsPersonalSiteRoute
   ProjectsIndexRoute: typeof ProjectsIndexRoute
 }
 
@@ -138,6 +151,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/personal-site': {
+      id: '/projects/personal-site'
+      path: '/projects/personal-site'
+      fullPath: '/projects/personal-site'
+      preLoaderRoute: typeof ProjectsPersonalSiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects/m2m': {
       id: '/projects/m2m'
       path: '/projects/m2m'
@@ -161,6 +181,7 @@ const rootRouteChildren: RootRouteChildren = {
   ResumeRoute: ResumeRoute,
   ProjectsDeskmateRoute: ProjectsDeskmateRoute,
   ProjectsM2mRoute: ProjectsM2mRoute,
+  ProjectsPersonalSiteRoute: ProjectsPersonalSiteRoute,
   ProjectsIndexRoute: ProjectsIndexRoute,
 }
 export const routeTree = rootRouteImport
