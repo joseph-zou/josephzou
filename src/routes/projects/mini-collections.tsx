@@ -80,6 +80,8 @@ function RouteComponent() {
             {[...columnProjects, ...columnProjects].map((p, idx) => (
               <Link
                 key={idx}
+                to="/"
+                disabled={true}
                 className="aspect-[3/4] w-full rounded-2xl shadow flex items-center justify-center text-center font-semibold text-black overflow-hidden"
               >
                 <img
