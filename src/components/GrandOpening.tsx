@@ -11,7 +11,6 @@ import { useThree } from "@react-three/fiber";
 
 const GrandOpening = () => {
   const textRef = useRef<THREE.Mesh>(null);
-  const { camera } = useThree();
 
   // useEffect(() => {
   //   camera.layers.enable(1); // bloom layer

@@ -14,8 +14,11 @@ import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProjectsIndexRouteImport } from './routes/projects/index'
 import { Route as ProjectsPersonalSiteRouteImport } from './routes/projects/personal-site'
+import { Route as ProjectsMiniCollectionsRouteImport } from './routes/projects/mini-collections'
 import { Route as ProjectsM2mRouteImport } from './routes/projects/m2m'
+import { Route as ProjectsJcurveRouteImport } from './routes/projects/jcurve'
 import { Route as ProjectsDeskmateRouteImport } from './routes/projects/deskmate'
+import { Route as ProjectsAlfredRouteImport } from './routes/projects/alfred'
 
 const ResumeRoute = ResumeRouteImport.update({
   id: '/resume',
@@ -42,9 +45,19 @@ const ProjectsPersonalSiteRoute = ProjectsPersonalSiteRouteImport.update({
   path: '/projects/personal-site',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsMiniCollectionsRoute = ProjectsMiniCollectionsRouteImport.update({
+  id: '/projects/mini-collections',
+  path: '/projects/mini-collections',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsM2mRoute = ProjectsM2mRouteImport.update({
   id: '/projects/m2m',
   path: '/projects/m2m',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsJcurveRoute = ProjectsJcurveRouteImport.update({
+  id: '/projects/jcurve',
+  path: '/projects/jcurve',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsDeskmateRoute = ProjectsDeskmateRouteImport.update({
@@ -52,13 +65,21 @@ const ProjectsDeskmateRoute = ProjectsDeskmateRouteImport.update({
   path: '/projects/deskmate',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsAlfredRoute = ProjectsAlfredRouteImport.update({
+  id: '/projects/alfred',
+  path: '/projects/alfred',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/gallery': typeof GalleryRoute
   '/resume': typeof ResumeRoute
+  '/projects/alfred': typeof ProjectsAlfredRoute
   '/projects/deskmate': typeof ProjectsDeskmateRoute
+  '/projects/jcurve': typeof ProjectsJcurveRoute
   '/projects/m2m': typeof ProjectsM2mRoute
+  '/projects/mini-collections': typeof ProjectsMiniCollectionsRoute
   '/projects/personal-site': typeof ProjectsPersonalSiteRoute
   '/projects': typeof ProjectsIndexRoute
 }
@@ -66,8 +87,11 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/gallery': typeof GalleryRoute
   '/resume': typeof ResumeRoute
+  '/projects/alfred': typeof ProjectsAlfredRoute
   '/projects/deskmate': typeof ProjectsDeskmateRoute
+  '/projects/jcurve': typeof ProjectsJcurveRoute
   '/projects/m2m': typeof ProjectsM2mRoute
+  '/projects/mini-collections': typeof ProjectsMiniCollectionsRoute
   '/projects/personal-site': typeof ProjectsPersonalSiteRoute
   '/projects': typeof ProjectsIndexRoute
 }
@@ -76,8 +100,11 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/gallery': typeof GalleryRoute
   '/resume': typeof ResumeRoute
+  '/projects/alfred': typeof ProjectsAlfredRoute
   '/projects/deskmate': typeof ProjectsDeskmateRoute
+  '/projects/jcurve': typeof ProjectsJcurveRoute
   '/projects/m2m': typeof ProjectsM2mRoute
+  '/projects/mini-collections': typeof ProjectsMiniCollectionsRoute
   '/projects/personal-site': typeof ProjectsPersonalSiteRoute
   '/projects/': typeof ProjectsIndexRoute
 }
@@ -87,8 +114,11 @@ export interface FileRouteTypes {
     | '/'
     | '/gallery'
     | '/resume'
+    | '/projects/alfred'
     | '/projects/deskmate'
+    | '/projects/jcurve'
     | '/projects/m2m'
+    | '/projects/mini-collections'
     | '/projects/personal-site'
     | '/projects'
   fileRoutesByTo: FileRoutesByTo
@@ -96,8 +126,11 @@ export interface FileRouteTypes {
     | '/'
     | '/gallery'
     | '/resume'
+    | '/projects/alfred'
     | '/projects/deskmate'
+    | '/projects/jcurve'
     | '/projects/m2m'
+    | '/projects/mini-collections'
     | '/projects/personal-site'
     | '/projects'
   id:
@@ -105,8 +138,11 @@ export interface FileRouteTypes {
     | '/'
     | '/gallery'
     | '/resume'
+    | '/projects/alfred'
     | '/projects/deskmate'
+    | '/projects/jcurve'
     | '/projects/m2m'
+    | '/projects/mini-collections'
     | '/projects/personal-site'
     | '/projects/'
   fileRoutesById: FileRoutesById
@@ -115,8 +151,11 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   GalleryRoute: typeof GalleryRoute
   ResumeRoute: typeof ResumeRoute
+  ProjectsAlfredRoute: typeof ProjectsAlfredRoute
   ProjectsDeskmateRoute: typeof ProjectsDeskmateRoute
+  ProjectsJcurveRoute: typeof ProjectsJcurveRoute
   ProjectsM2mRoute: typeof ProjectsM2mRoute
+  ProjectsMiniCollectionsRoute: typeof ProjectsMiniCollectionsRoute
   ProjectsPersonalSiteRoute: typeof ProjectsPersonalSiteRoute
   ProjectsIndexRoute: typeof ProjectsIndexRoute
 }
@@ -158,11 +197,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsPersonalSiteRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/mini-collections': {
+      id: '/projects/mini-collections'
+      path: '/projects/mini-collections'
+      fullPath: '/projects/mini-collections'
+      preLoaderRoute: typeof ProjectsMiniCollectionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects/m2m': {
       id: '/projects/m2m'
       path: '/projects/m2m'
       fullPath: '/projects/m2m'
       preLoaderRoute: typeof ProjectsM2mRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/jcurve': {
+      id: '/projects/jcurve'
+      path: '/projects/jcurve'
+      fullPath: '/projects/jcurve'
+      preLoaderRoute: typeof ProjectsJcurveRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects/deskmate': {
@@ -172,6 +225,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsDeskmateRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/alfred': {
+      id: '/projects/alfred'
+      path: '/projects/alfred'
+      fullPath: '/projects/alfred'
+      preLoaderRoute: typeof ProjectsAlfredRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -179,8 +239,11 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   GalleryRoute: GalleryRoute,
   ResumeRoute: ResumeRoute,
+  ProjectsAlfredRoute: ProjectsAlfredRoute,
   ProjectsDeskmateRoute: ProjectsDeskmateRoute,
+  ProjectsJcurveRoute: ProjectsJcurveRoute,
   ProjectsM2mRoute: ProjectsM2mRoute,
+  ProjectsMiniCollectionsRoute: ProjectsMiniCollectionsRoute,
   ProjectsPersonalSiteRoute: ProjectsPersonalSiteRoute,
   ProjectsIndexRoute: ProjectsIndexRoute,
 }

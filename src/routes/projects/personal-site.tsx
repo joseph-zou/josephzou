@@ -60,10 +60,10 @@ function RouteComponent() {
           <div className="project-section">
             <p className="project-sub-subheading">Introduction</p>
             <p className="project-sub-subheading-paragraph flex w-full ">
-              Although I rarely use social media, I wanted a space to share
-              things that interest me—so I built this site. Having this personal
-              site filled with my projects has also been incredibly motivating;
-              it makes finishing them feel that much more rewarding.
+              I rarely use social media, but I wanted a space to share things
+              that interest me—so I built this site. Having this personal site
+              filled with my projects has also been incredibly motivating; it
+              makes finishing them feel that much more rewarding.
             </p>
           </div>
           <div className="project-section">

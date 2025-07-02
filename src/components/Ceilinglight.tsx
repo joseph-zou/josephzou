@@ -27,7 +27,6 @@ const Ceilinglight = ({
   });
 
   // const m = Spotlight
-  console.log(nodes);
   return (
     <group>
       <group scale={[0.1, 0.1, 0.1]} position={ceilinglightPosition}>

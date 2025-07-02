@@ -20,7 +20,7 @@ const Spotlight = ({
 
   const spotlightRef = useRef<THREE.SpotLight>(null);
   const targetRef = useRef<THREE.Object3D>(null);
-  console.log(nodes);
+
   const spotlightTail = useMemo(
     () => nodes.Spotlight_Spotlight_0.clone(),
     [nodes]
@@ -39,7 +39,6 @@ const Spotlight = ({
   });
 
   // const m = Spotlight
-  console.log(nodes);
   return (
     <group>
       {/* Scaled model only */}

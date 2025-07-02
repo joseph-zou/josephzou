@@ -17,7 +17,7 @@ const ProjectCard = ({
     >
       <div
         className="
-      h-[350px] flex flex-col justify-between
+      h-[300px] md:h-[350px] flex flex-col justify-between
       rounded-xl shadow-md overflow-hidden bg-background
       transform transition duration-300 hover:scale-105
     "
@@ -31,7 +31,7 @@ const ProjectCard = ({
           <p className="text-p text-sm mb-2 md:text-md line-clamp-3">
             {description}
           </p>
-          <p className="text-xs text-p text-muted md:text-md h-[35px] mt-auto">
+          <p className="text-xs text-p text-muted md:text-md h-[25px] mt-auto">
             {keywords.join(" | ")}
           </p>
         </div>

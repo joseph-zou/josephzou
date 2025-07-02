@@ -31,6 +31,43 @@ export const projectsCardData: ProjectCardData[] = [
     description:
       "A private, local assistant for advice, conversation, emails, reminders, calendars, and texts",
     keywords: ["Ollama", "Local LLM"],
-    projectId: "personal-site",
+    projectId: "alfred",
+  },
+  {
+    img: NoImageYet,
+    title: "Mother to Mother",
+    description:
+      "Built a full stack application with admin portal for a nonprofit connecting mothers to resources.",
+    keywords: ["React", "Vite", "Next.js", "Express", "Node"],
+    projectId: "m2m",
+  },
+  {
+    img: NoImageYet,
+    title: "JCurve",
+    description: "Built a fully functional store using shopify.",
+    keywords: ["Shopify", "Figma"],
+    projectId: "jcurve",
+  },
+  {
+    img: NoImageYet,
+    title: "CountMeds",
+    description:
+      "With Vanderbilt Medical Center we developed a mobile app for prescription adherence.",
+    keywords: [
+      "Object Detection",
+      "Expo",
+      "React Native",
+      "Docker",
+      "Firebase",
+      "Redcap",
+    ],
+    projectId: "count-meds",
+  },
+  {
+    img: NoImageYet,
+    title: "Mini's Collections",
+    description: "A collection of small projects.",
+    keywords: [],
+    projectId: "mini-collections",
   },
 ];
