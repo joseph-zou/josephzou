@@ -14,6 +14,7 @@ import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProjectsIndexRouteImport } from './routes/projects/index'
 import { Route as ProjectsPersonalSiteRouteImport } from './routes/projects/personal-site'
+import { Route as ProjectsPasswordManagerRouteImport } from './routes/projects/password-manager'
 import { Route as ProjectsMiniCollectionsRouteImport } from './routes/projects/mini-collections'
 import { Route as ProjectsM2mRouteImport } from './routes/projects/m2m'
 import { Route as ProjectsJcurveRouteImport } from './routes/projects/jcurve'
@@ -43,6 +44,11 @@ const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
 const ProjectsPersonalSiteRoute = ProjectsPersonalSiteRouteImport.update({
   id: '/projects/personal-site',
   path: '/projects/personal-site',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsPasswordManagerRoute = ProjectsPasswordManagerRouteImport.update({
+  id: '/projects/password-manager',
+  path: '/projects/password-manager',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsMiniCollectionsRoute = ProjectsMiniCollectionsRouteImport.update({
@@ -80,6 +86,7 @@ export interface FileRoutesByFullPath {
   '/projects/jcurve': typeof ProjectsJcurveRoute
   '/projects/m2m': typeof ProjectsM2mRoute
   '/projects/mini-collections': typeof ProjectsMiniCollectionsRoute
+  '/projects/password-manager': typeof ProjectsPasswordManagerRoute
   '/projects/personal-site': typeof ProjectsPersonalSiteRoute
   '/projects': typeof ProjectsIndexRoute
 }
@@ -92,6 +99,7 @@ export interface FileRoutesByTo {
   '/projects/jcurve': typeof ProjectsJcurveRoute
   '/projects/m2m': typeof ProjectsM2mRoute
   '/projects/mini-collections': typeof ProjectsMiniCollectionsRoute
+  '/projects/password-manager': typeof ProjectsPasswordManagerRoute
   '/projects/personal-site': typeof ProjectsPersonalSiteRoute
   '/projects': typeof ProjectsIndexRoute
 }
@@ -105,6 +113,7 @@ export interface FileRoutesById {
   '/projects/jcurve': typeof ProjectsJcurveRoute
   '/projects/m2m': typeof ProjectsM2mRoute
   '/projects/mini-collections': typeof ProjectsMiniCollectionsRoute
+  '/projects/password-manager': typeof ProjectsPasswordManagerRoute
   '/projects/personal-site': typeof ProjectsPersonalSiteRoute
   '/projects/': typeof ProjectsIndexRoute
 }
@@ -119,6 +128,7 @@ export interface FileRouteTypes {
     | '/projects/jcurve'
     | '/projects/m2m'
     | '/projects/mini-collections'
+    | '/projects/password-manager'
     | '/projects/personal-site'
     | '/projects'
   fileRoutesByTo: FileRoutesByTo
@@ -131,6 +141,7 @@ export interface FileRouteTypes {
     | '/projects/jcurve'
     | '/projects/m2m'
     | '/projects/mini-collections'
+    | '/projects/password-manager'
     | '/projects/personal-site'
     | '/projects'
   id:
@@ -143,6 +154,7 @@ export interface FileRouteTypes {
     | '/projects/jcurve'
     | '/projects/m2m'
     | '/projects/mini-collections'
+    | '/projects/password-manager'
     | '/projects/personal-site'
     | '/projects/'
   fileRoutesById: FileRoutesById
@@ -156,6 +168,7 @@ export interface RootRouteChildren {
   ProjectsJcurveRoute: typeof ProjectsJcurveRoute
   ProjectsM2mRoute: typeof ProjectsM2mRoute
   ProjectsMiniCollectionsRoute: typeof ProjectsMiniCollectionsRoute
+  ProjectsPasswordManagerRoute: typeof ProjectsPasswordManagerRoute
   ProjectsPersonalSiteRoute: typeof ProjectsPersonalSiteRoute
   ProjectsIndexRoute: typeof ProjectsIndexRoute
 }
@@ -195,6 +208,13 @@ declare module '@tanstack/react-router' {
       path: '/projects/personal-site'
       fullPath: '/projects/personal-site'
       preLoaderRoute: typeof ProjectsPersonalSiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/password-manager': {
+      id: '/projects/password-manager'
+      path: '/projects/password-manager'
+      fullPath: '/projects/password-manager'
+      preLoaderRoute: typeof ProjectsPasswordManagerRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects/mini-collections': {
@@ -244,6 +264,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProjectsJcurveRoute: ProjectsJcurveRoute,
   ProjectsM2mRoute: ProjectsM2mRoute,
   ProjectsMiniCollectionsRoute: ProjectsMiniCollectionsRoute,
+  ProjectsPasswordManagerRoute: ProjectsPasswordManagerRoute,
   ProjectsPersonalSiteRoute: ProjectsPersonalSiteRoute,
   ProjectsIndexRoute: ProjectsIndexRoute,
 }

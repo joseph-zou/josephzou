@@ -6,14 +6,7 @@ const Projects = () => {
     <>
       <div className="min-h-screen min-w-screen bg-background grid grid-cols-[repeat(auto-fit,_250px)] grid-rows-[300px] md:grid-rows-[350px] md:grid-cols-[repeat(auto-fit,_300px)] justify-center gap-8 p-6 ">
         {projectsCardData.map((project) => (
-          <ProjectCard
-            key={project.projectId}
-            img={project.img}
-            title={project.title}
-            description={project.description}
-            keywords={project.keywords}
-            projectId={project.projectId}
-          />
+          <ProjectCard key={project.projectId} {...project} />
         ))}
       </div>
     </>

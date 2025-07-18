@@ -1,10 +1,10 @@
-import Ekreb from "/images/MiniCollection/ekreb.png";
-import Mini1 from "/images/MiniCollection/mini1.png";
-import Mini2 from "/images/MiniCollection/mini2.png";
-import Mini3 from "/images/MiniCollection/mini3.png";
-import Mini4 from "/images/MiniCollection/mini4.png";
-import Mini5 from "/images/MiniCollection/mini5.png";
-import Mini6 from "/images/MiniCollection/mini6.png";
+import Ekreb from "/images/MinisCollection/ekreb.png";
+import Mini1 from "/images/MinisCollection/mini1.png";
+import Mini2 from "/images/MinisCollection/mini2.png";
+import Mini3 from "/images/MinisCollection/mini3.png";
+import Mini4 from "/images/MinisCollection/mini4.png";
+import Mini5 from "/images/MinisCollection/mini5.png";
+import Mini6 from "/images/MinisCollection/mini6.png";
 
 export interface miniProjectCardData {
   img: string;
