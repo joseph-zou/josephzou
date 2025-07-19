@@ -1,4 +1,5 @@
 import Ekreb from "/images/MinisCollection/ekreb.png";
+import Brain from "/images/MinisCollection/brain.png";
 import Mini1 from "/images/MinisCollection/mini1.png";
 import Mini2 from "/images/MinisCollection/mini2.png";
 import Mini3 from "/images/MinisCollection/mini3.png";
@@ -10,6 +11,7 @@ export interface miniProjectCardData {
   img: string;
   title: string;
   description: string;
+  link?: string;
 }
 
 export const miniProjectsData: miniProjectCardData[] = [
@@ -18,11 +20,23 @@ export const miniProjectsData: miniProjectCardData[] = [
     title: "Ekreb",
     description:
       "A word guesser game. Project challenge submission for acceptance into Change++",
+    link: "https://github.com/joseph-zou/ekreb",
   },
   {
-    img: Mini1,
-    title: "Mini 1",
-    description: "Placeholder description for Mini 1 project.",
+    img: Brain,
+    title: "Brain",
+    description: "A mind mapper using custom svgs.",
+    link: "https://github.com/joseph-zou/brain",
+  },
+  {
+    img: Mini2,
+    title: "Mini 2",
+    description: "Placeholder description for Mini 2 project.",
+  },
+  {
+    img: Mini2,
+    title: "Mini 2",
+    description: "Placeholder description for Mini 2 project.",
   },
   {
     img: Mini2,

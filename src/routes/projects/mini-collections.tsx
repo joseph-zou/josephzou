@@ -78,10 +78,12 @@ function RouteComponent() {
         >
           <div className="scroller__inner">
             {[...columnProjects, ...columnProjects].map((p, idx) => (
-              <Link
+              <a
                 key={idx}
-                to="/"
-                disabled={true}
+                href={p.link}
+                target="_blank"
+                rel="noreferrer"
+                referrerPolicy="no-referrer"
                 className="aspect-[3/4] w-full rounded-2xl shadow flex items-center justify-center text-center font-semibold text-black overflow-hidden"
               >
                 <img
@@ -89,7 +91,7 @@ function RouteComponent() {
                   alt={p.title}
                   className="object-cover w-full h-full"
                 />
-              </Link>
+              </a>
             ))}
           </div>
         </div>

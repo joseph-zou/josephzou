@@ -2,6 +2,7 @@ import DeskMateImage from "/images/DeskMate/index.png";
 import PersonalWebsiteImage from "/images/PersonalWebsite/index.png";
 import JCurveImage from "/images/JCurve/index.png";
 import PasswordManagerImage from "/images/PasswordManager/index.png";
+import LeetHubImage from "/images/Leethub/index.png";
 import MinisCollectionImage from "/images/MinisCollection/index.png";
 import NoImageYet from "/images/NoImageYet.png";
 import ComingSoon from "/images/ComingSoon.png";
@@ -85,10 +86,19 @@ export const projectsCardData: ProjectCardData[] = [
     img: PasswordManagerImage,
     title: "Password Manager",
     description: "A password manager for myself.",
-    keywords: [],
+    keywords: ["AWS", "Cryptography", "Express", "MongoDB", "Chrome"],
     projectId: "password-manager",
     status: "live",
     userCount: 6,
+  },
+  {
+    img: LeetHubImage,
+    title: "LeetHub",
+    description: "Automate putting solved Leetcode problems to Github.",
+    keywords: [],
+    projectId: "password-manager",
+    status: "paused",
+    userCount: null,
   },
   {
     img: MinisCollectionImage,

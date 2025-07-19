@@ -172,6 +172,7 @@ function RouteComponent() {
               rendering like using react-helmet to change the head tab content,
               there's only so much you can do with meta tags.
             </li>
+            <li>Get my own domain name.</li>
           </ul>
         </div>
       </div>
