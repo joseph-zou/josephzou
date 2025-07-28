@@ -11,12 +11,14 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ResumeRouteImport } from './routes/resume'
 import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as ChangelogRouteImport } from './routes/changelog'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProjectsIndexRouteImport } from './routes/projects/index'
 import { Route as ProjectsPersonalSiteRouteImport } from './routes/projects/personal-site'
-import { Route as ProjectsPasswordManagerRouteImport } from './routes/projects/password-manager'
+import { Route as ProjectsPasswinRouteImport } from './routes/projects/passwin'
 import { Route as ProjectsMiniCollectionsRouteImport } from './routes/projects/mini-collections'
 import { Route as ProjectsM2mRouteImport } from './routes/projects/m2m'
+import { Route as ProjectsLeethubRouteImport } from './routes/projects/leethub'
 import { Route as ProjectsJcurveRouteImport } from './routes/projects/jcurve'
 import { Route as ProjectsDeskmateRouteImport } from './routes/projects/deskmate'
 import { Route as ProjectsAlfredRouteImport } from './routes/projects/alfred'
@@ -29,6 +31,11 @@ const ResumeRoute = ResumeRouteImport.update({
 const GalleryRoute = GalleryRouteImport.update({
   id: '/gallery',
   path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChangelogRoute = ChangelogRouteImport.update({
+  id: '/changelog',
+  path: '/changelog',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -46,9 +53,9 @@ const ProjectsPersonalSiteRoute = ProjectsPersonalSiteRouteImport.update({
   path: '/projects/personal-site',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProjectsPasswordManagerRoute = ProjectsPasswordManagerRouteImport.update({
-  id: '/projects/password-manager',
-  path: '/projects/password-manager',
+const ProjectsPasswinRoute = ProjectsPasswinRouteImport.update({
+  id: '/projects/passwin',
+  path: '/projects/passwin',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsMiniCollectionsRoute = ProjectsMiniCollectionsRouteImport.update({
@@ -59,6 +66,11 @@ const ProjectsMiniCollectionsRoute = ProjectsMiniCollectionsRouteImport.update({
 const ProjectsM2mRoute = ProjectsM2mRouteImport.update({
   id: '/projects/m2m',
   path: '/projects/m2m',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsLeethubRoute = ProjectsLeethubRouteImport.update({
+  id: '/projects/leethub',
+  path: '/projects/leethub',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsJcurveRoute = ProjectsJcurveRouteImport.update({
@@ -79,41 +91,47 @@ const ProjectsAlfredRoute = ProjectsAlfredRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/changelog': typeof ChangelogRoute
   '/gallery': typeof GalleryRoute
   '/resume': typeof ResumeRoute
   '/projects/alfred': typeof ProjectsAlfredRoute
   '/projects/deskmate': typeof ProjectsDeskmateRoute
   '/projects/jcurve': typeof ProjectsJcurveRoute
+  '/projects/leethub': typeof ProjectsLeethubRoute
   '/projects/m2m': typeof ProjectsM2mRoute
   '/projects/mini-collections': typeof ProjectsMiniCollectionsRoute
-  '/projects/password-manager': typeof ProjectsPasswordManagerRoute
+  '/projects/passwin': typeof ProjectsPasswinRoute
   '/projects/personal-site': typeof ProjectsPersonalSiteRoute
   '/projects': typeof ProjectsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/changelog': typeof ChangelogRoute
   '/gallery': typeof GalleryRoute
   '/resume': typeof ResumeRoute
   '/projects/alfred': typeof ProjectsAlfredRoute
   '/projects/deskmate': typeof ProjectsDeskmateRoute
   '/projects/jcurve': typeof ProjectsJcurveRoute
+  '/projects/leethub': typeof ProjectsLeethubRoute
   '/projects/m2m': typeof ProjectsM2mRoute
   '/projects/mini-collections': typeof ProjectsMiniCollectionsRoute
-  '/projects/password-manager': typeof ProjectsPasswordManagerRoute
+  '/projects/passwin': typeof ProjectsPasswinRoute
   '/projects/personal-site': typeof ProjectsPersonalSiteRoute
   '/projects': typeof ProjectsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/changelog': typeof ChangelogRoute
   '/gallery': typeof GalleryRoute
   '/resume': typeof ResumeRoute
   '/projects/alfred': typeof ProjectsAlfredRoute
   '/projects/deskmate': typeof ProjectsDeskmateRoute
   '/projects/jcurve': typeof ProjectsJcurveRoute
+  '/projects/leethub': typeof ProjectsLeethubRoute
   '/projects/m2m': typeof ProjectsM2mRoute
   '/projects/mini-collections': typeof ProjectsMiniCollectionsRoute
-  '/projects/password-manager': typeof ProjectsPasswordManagerRoute
+  '/projects/passwin': typeof ProjectsPasswinRoute
   '/projects/personal-site': typeof ProjectsPersonalSiteRoute
   '/projects/': typeof ProjectsIndexRoute
 }
@@ -121,54 +139,62 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/changelog'
     | '/gallery'
     | '/resume'
     | '/projects/alfred'
     | '/projects/deskmate'
     | '/projects/jcurve'
+    | '/projects/leethub'
     | '/projects/m2m'
     | '/projects/mini-collections'
-    | '/projects/password-manager'
+    | '/projects/passwin'
     | '/projects/personal-site'
     | '/projects'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/changelog'
     | '/gallery'
     | '/resume'
     | '/projects/alfred'
     | '/projects/deskmate'
     | '/projects/jcurve'
+    | '/projects/leethub'
     | '/projects/m2m'
     | '/projects/mini-collections'
-    | '/projects/password-manager'
+    | '/projects/passwin'
     | '/projects/personal-site'
     | '/projects'
   id:
     | '__root__'
     | '/'
+    | '/changelog'
     | '/gallery'
     | '/resume'
     | '/projects/alfred'
     | '/projects/deskmate'
     | '/projects/jcurve'
+    | '/projects/leethub'
     | '/projects/m2m'
     | '/projects/mini-collections'
-    | '/projects/password-manager'
+    | '/projects/passwin'
     | '/projects/personal-site'
     | '/projects/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ChangelogRoute: typeof ChangelogRoute
   GalleryRoute: typeof GalleryRoute
   ResumeRoute: typeof ResumeRoute
   ProjectsAlfredRoute: typeof ProjectsAlfredRoute
   ProjectsDeskmateRoute: typeof ProjectsDeskmateRoute
   ProjectsJcurveRoute: typeof ProjectsJcurveRoute
+  ProjectsLeethubRoute: typeof ProjectsLeethubRoute
   ProjectsM2mRoute: typeof ProjectsM2mRoute
   ProjectsMiniCollectionsRoute: typeof ProjectsMiniCollectionsRoute
-  ProjectsPasswordManagerRoute: typeof ProjectsPasswordManagerRoute
+  ProjectsPasswinRoute: typeof ProjectsPasswinRoute
   ProjectsPersonalSiteRoute: typeof ProjectsPersonalSiteRoute
   ProjectsIndexRoute: typeof ProjectsIndexRoute
 }
@@ -187,6 +213,13 @@ declare module '@tanstack/react-router' {
       path: '/gallery'
       fullPath: '/gallery'
       preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/changelog': {
+      id: '/changelog'
+      path: '/changelog'
+      fullPath: '/changelog'
+      preLoaderRoute: typeof ChangelogRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -210,11 +243,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsPersonalSiteRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/projects/password-manager': {
-      id: '/projects/password-manager'
-      path: '/projects/password-manager'
-      fullPath: '/projects/password-manager'
-      preLoaderRoute: typeof ProjectsPasswordManagerRouteImport
+    '/projects/passwin': {
+      id: '/projects/passwin'
+      path: '/projects/passwin'
+      fullPath: '/projects/passwin'
+      preLoaderRoute: typeof ProjectsPasswinRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects/mini-collections': {
@@ -229,6 +262,13 @@ declare module '@tanstack/react-router' {
       path: '/projects/m2m'
       fullPath: '/projects/m2m'
       preLoaderRoute: typeof ProjectsM2mRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/leethub': {
+      id: '/projects/leethub'
+      path: '/projects/leethub'
+      fullPath: '/projects/leethub'
+      preLoaderRoute: typeof ProjectsLeethubRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects/jcurve': {
@@ -257,14 +297,16 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ChangelogRoute: ChangelogRoute,
   GalleryRoute: GalleryRoute,
   ResumeRoute: ResumeRoute,
   ProjectsAlfredRoute: ProjectsAlfredRoute,
   ProjectsDeskmateRoute: ProjectsDeskmateRoute,
   ProjectsJcurveRoute: ProjectsJcurveRoute,
+  ProjectsLeethubRoute: ProjectsLeethubRoute,
   ProjectsM2mRoute: ProjectsM2mRoute,
   ProjectsMiniCollectionsRoute: ProjectsMiniCollectionsRoute,
-  ProjectsPasswordManagerRoute: ProjectsPasswordManagerRoute,
+  ProjectsPasswinRoute: ProjectsPasswinRoute,
   ProjectsPersonalSiteRoute: ProjectsPersonalSiteRoute,
   ProjectsIndexRoute: ProjectsIndexRoute,
 }

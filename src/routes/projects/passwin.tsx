@@ -4,7 +4,7 @@ import SectionNavigator from "@/components/SectionNavigator";
 import type { Section } from "@/components/SectionNavigator";
 import { FaGithub, FaYoutube, FaChrome } from "react-icons/fa";
 
-export const Route = createFileRoute("/projects/password-manager")({
+export const Route = createFileRoute("/projects/passwin")({
   component: RouteComponent,
 });
 
