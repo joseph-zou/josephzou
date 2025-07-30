@@ -5,6 +5,39 @@
   --color-p: oklch(0.5452 0 0);
 }
 
+/* nav bar */
+.wrapper {
+  display: grid;
+}
+
+.typing {
+  width: 12ch;
+  animation:
+    typing 3s steps(12, end) forwards,
+    removeCursor 0.1s 3.1s forwards;
+  white-space: nowrap;
+  overflow: hidden;
+  border: none;
+  border-right: 3px solid black;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 12ch;
+  }
+}
+
+@keyframes removeCursor {
+  to {
+    border-right: none;
+  }
+}
+
 /* project page */
 .project-container {
   @apply flex flex-row mt-10 px-5 pb-20 bg-background md:pl-10 md:pr-20 md:gap-x-10;
@@ -16,6 +49,7 @@
 
 .project {
 }
+
 .project-header {
   @apply border-l-5 md:border-l-15 pl-5;
 }

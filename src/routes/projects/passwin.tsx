@@ -23,7 +23,7 @@ function RouteComponent() {
       </div>
       <div className="project">
         <div className="project-header" id="maps-header">
-          <h1 className="project-name">Password Manager</h1>
+          <h1 className="project-name">PassWin</h1>
           <p className="project-subheading"></p>
           <p className="project-subheading"></p>
           <p className="project-subheading project-github">
@@ -37,8 +37,7 @@ function RouteComponent() {
                 <FaGithub />
               </a>
               <a
-                href="#"
-                onClick={(e) => e.preventDefault()}
+                href="https://chromewebstore.google.com/detail/passwin/kebafpphjokgalmnacbpokgodbnobbij"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-p hover:text-black text-2xl"
@@ -188,7 +187,7 @@ function RouteComponent() {
               I used an AWS EC2 instance to deploy my backend, Atlas for my
               database and DuckDNS for my domain name. I used Let's Encrypt to
               obtain SSL/TLS certificates for secure communication. I built a
-              reverse proxy with Nginx to foward to my backend. For CICD I used
+              reverse proxy with Nginx to forward to my backend. For CICD I used
               github actions. The frontend is published to the Chrome Extension
               Web Store.
             </p>

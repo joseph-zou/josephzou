@@ -1,5 +1,6 @@
 import DeskMateImage from "/images/DeskMate/index.png";
 import PersonalWebsiteImage from "/images/PersonalWebsite/index.png";
+import M2MImage from "/images/M2M/index.png";
 import JCurveImage from "/images/JCurve/index.png";
 import PasswordManagerImage from "/images/PasswordManager/index.png";
 import LeetHubImage from "/images/Leethub/index.png";
@@ -12,7 +13,7 @@ export interface ProjectCardData {
   description: string;
   keywords: string[];
   projectId: string;
-  status: "live" | "paused" | "inactive";
+  status: "live" | "paused" | "inactive" | null;
   userCount: number | null;
 }
 
@@ -47,14 +48,14 @@ export const projectsCardData: ProjectCardData[] = [
     userCount: null,
   },
   {
-    img: NoImageYet,
+    img: M2MImage,
     title: "Mother to Mother",
     description:
-      "Built a full stack application with admin portal for a nonprofit connecting mothers to resources.",
-    keywords: ["React", "Vite", "Next.js", "Express", "Node"],
+      "Built a full-stack solution connecting donors, recipients, and staff while digitizing workflows through an admin portal.",
+    keywords: ["React", "Express", "Node", "AWS", "SQL"],
     projectId: "m2m",
     status: "live",
-    userCount: null,
+    userCount: 400,
   },
   {
     img: JCurveImage,
@@ -100,13 +101,22 @@ export const projectsCardData: ProjectCardData[] = [
     status: "paused",
     userCount: null,
   },
+  // {
+  //   img: NoImageYet,
+  //   title: "MoneyMap",
+  //   description: "A personal and clear roadmap of your finances.",
+  //   keywords: [],
+  //   projectId: "leethub",
+  //   status: "paused",
+  //   userCount: null,
+  // },
   {
     img: MinisCollectionImage,
     title: "Mini's Collections",
     description: "A collection of small projects.",
     keywords: [],
     projectId: "mini-collections",
-    status: "live",
+    status: null,
     userCount: null,
   },
 ];

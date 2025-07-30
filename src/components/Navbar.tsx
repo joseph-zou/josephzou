@@ -4,9 +4,11 @@ const Navbar = () => {
   return (
     <>
       <div className="py-2 px-4 gap-x-10 flex flex-col flex-wrap font-serif justify-between items-center md:flex-row md:px-16 md:p-8 md:gap-x-0">
-        <Link to="/" className="text-2xl md:text-3xl mt-2 mb-2">
-          Joseph Zou
-        </Link>
+        <div className="wrapper">
+          <Link to="/" className="typing text-2xl md:text-3xl mt-2 mb-2 md:m-0">
+            ~/Joseph-Zou
+          </Link>
+        </div>
 
         <div className="flex flex-wrap justify-center gap-x-3 gap-y-2 text-base sm:text-lg md:text-xl md:flex-row">
           <Link to="/" className="[&.active]:font-bold">

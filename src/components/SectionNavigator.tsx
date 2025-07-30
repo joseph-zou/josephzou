@@ -18,7 +18,7 @@ const SectionNavigator = ({ sections, handleClick }: SectionNavigatorProps) => {
         className="sticky top-20 overflow-auto"
         style={{ height: "calc(100vh - 10rem)" }}
       >
-        <div className="flex flex-col gap-y-3 text-p text-sm md:text-2xl h-full">
+        <div className="flex flex-col gap-y-3 text-p text-sm md:text-xl h-full">
           {sections.map((item) => (
             <div
               className="cursor-pointer"

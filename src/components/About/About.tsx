@@ -13,7 +13,7 @@ const About = () => {
           />
         </div>
         <div className="flex flex-col md:w-lg md:h-lg ">
-          <p className="text-sm text-p leading-relaxed md:text-2xl ">
+          <p className="text-sm text-p leading-relaxed md:text-lg ">
             <span className="font-serif text-lg md:text-3xl text-black inline-block mb-3">
               Greetings, I’m Joe.
             </span>

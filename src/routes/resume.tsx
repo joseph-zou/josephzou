@@ -5,5 +5,13 @@ export const Route = createFileRoute("/resume")({
 });
 
 function RouteComponent() {
-  return <div>Hello "/resume"!</div>;
+  return (
+    <div className="w-screen h-screen m-0 p-0">
+      <iframe
+        src="/Joseph_v2025_resume.pdf#zoom=100"
+        className="w-full h-full border-none"
+        title="Resume"
+      ></iframe>
+    </div>
+  );
 }

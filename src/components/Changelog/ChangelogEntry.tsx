@@ -26,7 +26,7 @@ export default function ChangelogEntry({
   const hasEntries = Object.values(entries).some(Boolean);
 
   return (
-    <div className="flex gap-4 w-full mb-6">
+    <div className="flex flex-col gap-4 w-full mb-6 md:flex-row">
       {/* Date label */}
       <div
         className={`min-w-[120px] text-xl font-semibold ${
