@@ -23,7 +23,9 @@ const config = {
   widgets: [
     {
       widgetName: "dogPicture",
-      widgetFunc: (props) => <DogPicture {...props} />,
+      widgetFunc: (props: any) => <DogPicture {...props} />,
+      props: {},
+      mapStateToProps: [],
     },
   ],
 };

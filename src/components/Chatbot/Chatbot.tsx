@@ -8,7 +8,7 @@ import ActionProvider from "./ActionProvider";
 import configBase from "./config";
 
 // custom components
-import Header from "./customComponents/header";
+import Header from "./customComponents/Header";
 import { BsRobot } from "react-icons/bs";
 
 export default function ChatbotComponent() {

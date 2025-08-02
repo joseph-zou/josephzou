@@ -1,10 +1,19 @@
-import React from "react";
+import React, { type ReactNode } from "react";
+interface ActionProviderProps {
+  createChatBotMessage: (message: string, options?: any) => any;
+  setState: React.Dispatch<React.SetStateAction<any>>;
+  children: ReactNode;
+}
 
-const ActionProvider = ({ createChatBotMessage, setState, children }) => {
+const ActionProvider = ({
+  createChatBotMessage,
+  setState,
+  children,
+}: ActionProviderProps) => {
   const handleHello = () => {
     const botMessage = createChatBotMessage("Hello. Nice to meet you.");
 
-    setState((prev) => ({
+    setState((prev: any) => ({
       ...prev,
       messages: [...prev.messages, botMessage],
     }));
@@ -18,7 +27,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       }
     );
 
-    setState((prev) => ({
+    setState((prev: any) => ({
       ...prev,
       messages: [...prev.messages, botMessage],
     }));

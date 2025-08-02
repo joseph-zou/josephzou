@@ -1,4 +1,4 @@
-import React from "react";
+import React, { type ReactNode, type ReactElement } from "react";
 
 type MessageParserProps = {
   children: React.ReactNode;
@@ -20,8 +20,8 @@ const MessageParser = ({ children, actions }: MessageParserProps) => {
     <div>
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
-          return React.cloneElement(child, {
-            parse: parse,
+          return React.cloneElement(child as ReactElement<any>, {
+            parse,
             actions,
           });
         }
