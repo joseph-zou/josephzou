@@ -1,15 +1,16 @@
 import profileImage from "/images/profile.jpg";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import ChatbotComponent from "../Chatbot/Chatbot";
 
 const About = () => {
   return (
     <>
       <div className="flex flex-col bg-background justify-center mt-2 px-10 gap-y-3 md:flex-row md:gap-12 md:items-start md:mt-10">
-        <div className="md:w-lg md:h-lg">
+        <div className="mx-auto max-w-[300px] md:w-lg md:h-lg md:mx-0">
           <img
             src={profileImage}
             alt="My profile photo"
-            className="object-contain"
+            className="w-full h-auto object-contain"
           />
         </div>
         <div className="flex flex-col md:w-lg md:h-lg ">
@@ -60,6 +61,9 @@ const About = () => {
               <FaEnvelope />
             </a>
           </div>
+        </div>
+        <div className="fixed bottom-4 right-4 z-50">
+          <ChatbotComponent />
         </div>
       </div>
     </>
