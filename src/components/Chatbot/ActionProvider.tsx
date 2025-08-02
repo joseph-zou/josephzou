@@ -1,4 +1,4 @@
-import React, { type ReactNode } from "react";
+import React, { type ReactNode, type ReactElement } from "react";
 interface ActionProviderProps {
   createChatBotMessage: (message: string, options?: any) => any;
   setState: React.Dispatch<React.SetStateAction<any>>;
@@ -36,7 +36,7 @@ const ActionProvider = ({
   return (
     <div>
       {React.Children.map(children, (child) => {
-        return React.cloneElement(child, {
+        return React.cloneElement(child as ReactElement<any>, {
           actions: {
             handleHello,
             handleDog,
