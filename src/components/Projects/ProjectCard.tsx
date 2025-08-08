@@ -40,14 +40,14 @@ const ProjectCard = ({
                       <span
                         className={`
         animate-ping absolute inline-flex h-full w-full rounded-full
-        ${status === "live" ? "bg-green-400" : status === "paused" ? "bg-yellow-400" : "bg-red-400"}
+        ${status === "live" ? "bg-green-400" : status === "dev" ? "bg-yellow-400" : "bg-red-400"}
         opacity-75
       `}
                       ></span>
                       <span
                         className={`
         relative inline-flex rounded-full h-2.5 w-2.5
-        ${status === "live" ? "bg-green-500" : status === "paused" ? "bg-yellow-500" : "bg-red-500"}
+        ${status === "live" ? "bg-green-500" : status === "dev" ? "bg-yellow-500" : "bg-red-500"}
       `}
                       ></span>
                     </span>

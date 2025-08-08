@@ -2,8 +2,9 @@ import DeskMateImage from "/images/DeskMate/index.png";
 import PersonalWebsiteImage from "/images/PersonalWebsite/index.png";
 import M2MImage from "/images/M2M/index.png";
 import JCurveImage from "/images/JCurve/index.png";
-import PasswordManagerImage from "/images/PasswordManager/index.png";
+import PassWinImage from "/images/PassWin/index.png";
 import LeetHubImage from "/images/Leethub/index.png";
+import MonkeyStash from "/images/PersonalFinanceDashboard/index.png";
 import MinisCollectionImage from "/images/MinisCollection/index.png";
 import NoImageYet from "/images/NoImageYet.png";
 import ComingSoon from "/images/ComingSoon.png";
@@ -13,7 +14,7 @@ export interface ProjectCardData {
   description: string;
   keywords: string[];
   projectId: string;
-  status: "live" | "paused" | "inactive" | null;
+  status: "live" | "dev" | "inactive" | null;
   userCount: number | null;
 }
 
@@ -84,7 +85,7 @@ export const projectsCardData: ProjectCardData[] = [
     userCount: null,
   },
   {
-    img: PasswordManagerImage,
+    img: PassWinImage,
     title: "PassWin",
     description: "A password manager for myself.",
     keywords: ["AWS", "Cryptography", "Express", "MongoDB", "Chrome"],
@@ -98,7 +99,16 @@ export const projectsCardData: ProjectCardData[] = [
     description: "Automate putting solved Leetcode problems to Github.",
     keywords: [],
     projectId: "leethub",
-    status: "paused",
+    status: "dev",
+    userCount: null,
+  },
+  {
+    img: MonkeyStash,
+    title: "MonkeyStash",
+    description: "A personal finance dashboard",
+    keywords: [],
+    projectId: "monkeystash",
+    status: "dev",
     userCount: null,
   },
   // {

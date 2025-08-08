@@ -16,6 +16,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProjectsIndexRouteImport } from './routes/projects/index'
 import { Route as ProjectsPersonalSiteRouteImport } from './routes/projects/personal-site'
 import { Route as ProjectsPasswinRouteImport } from './routes/projects/passwin'
+import { Route as ProjectsMonkeystashRouteImport } from './routes/projects/monkeystash'
 import { Route as ProjectsMiniCollectionsRouteImport } from './routes/projects/mini-collections'
 import { Route as ProjectsM2mRouteImport } from './routes/projects/m2m'
 import { Route as ProjectsLeethubRouteImport } from './routes/projects/leethub'
@@ -56,6 +57,11 @@ const ProjectsPersonalSiteRoute = ProjectsPersonalSiteRouteImport.update({
 const ProjectsPasswinRoute = ProjectsPasswinRouteImport.update({
   id: '/projects/passwin',
   path: '/projects/passwin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsMonkeystashRoute = ProjectsMonkeystashRouteImport.update({
+  id: '/projects/monkeystash',
+  path: '/projects/monkeystash',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsMiniCollectionsRoute = ProjectsMiniCollectionsRouteImport.update({
@@ -100,6 +106,7 @@ export interface FileRoutesByFullPath {
   '/projects/leethub': typeof ProjectsLeethubRoute
   '/projects/m2m': typeof ProjectsM2mRoute
   '/projects/mini-collections': typeof ProjectsMiniCollectionsRoute
+  '/projects/monkeystash': typeof ProjectsMonkeystashRoute
   '/projects/passwin': typeof ProjectsPasswinRoute
   '/projects/personal-site': typeof ProjectsPersonalSiteRoute
   '/projects': typeof ProjectsIndexRoute
@@ -115,6 +122,7 @@ export interface FileRoutesByTo {
   '/projects/leethub': typeof ProjectsLeethubRoute
   '/projects/m2m': typeof ProjectsM2mRoute
   '/projects/mini-collections': typeof ProjectsMiniCollectionsRoute
+  '/projects/monkeystash': typeof ProjectsMonkeystashRoute
   '/projects/passwin': typeof ProjectsPasswinRoute
   '/projects/personal-site': typeof ProjectsPersonalSiteRoute
   '/projects': typeof ProjectsIndexRoute
@@ -131,6 +139,7 @@ export interface FileRoutesById {
   '/projects/leethub': typeof ProjectsLeethubRoute
   '/projects/m2m': typeof ProjectsM2mRoute
   '/projects/mini-collections': typeof ProjectsMiniCollectionsRoute
+  '/projects/monkeystash': typeof ProjectsMonkeystashRoute
   '/projects/passwin': typeof ProjectsPasswinRoute
   '/projects/personal-site': typeof ProjectsPersonalSiteRoute
   '/projects/': typeof ProjectsIndexRoute
@@ -148,6 +157,7 @@ export interface FileRouteTypes {
     | '/projects/leethub'
     | '/projects/m2m'
     | '/projects/mini-collections'
+    | '/projects/monkeystash'
     | '/projects/passwin'
     | '/projects/personal-site'
     | '/projects'
@@ -163,6 +173,7 @@ export interface FileRouteTypes {
     | '/projects/leethub'
     | '/projects/m2m'
     | '/projects/mini-collections'
+    | '/projects/monkeystash'
     | '/projects/passwin'
     | '/projects/personal-site'
     | '/projects'
@@ -178,6 +189,7 @@ export interface FileRouteTypes {
     | '/projects/leethub'
     | '/projects/m2m'
     | '/projects/mini-collections'
+    | '/projects/monkeystash'
     | '/projects/passwin'
     | '/projects/personal-site'
     | '/projects/'
@@ -194,6 +206,7 @@ export interface RootRouteChildren {
   ProjectsLeethubRoute: typeof ProjectsLeethubRoute
   ProjectsM2mRoute: typeof ProjectsM2mRoute
   ProjectsMiniCollectionsRoute: typeof ProjectsMiniCollectionsRoute
+  ProjectsMonkeystashRoute: typeof ProjectsMonkeystashRoute
   ProjectsPasswinRoute: typeof ProjectsPasswinRoute
   ProjectsPersonalSiteRoute: typeof ProjectsPersonalSiteRoute
   ProjectsIndexRoute: typeof ProjectsIndexRoute
@@ -248,6 +261,13 @@ declare module '@tanstack/react-router' {
       path: '/projects/passwin'
       fullPath: '/projects/passwin'
       preLoaderRoute: typeof ProjectsPasswinRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/monkeystash': {
+      id: '/projects/monkeystash'
+      path: '/projects/monkeystash'
+      fullPath: '/projects/monkeystash'
+      preLoaderRoute: typeof ProjectsMonkeystashRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects/mini-collections': {
@@ -306,6 +326,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProjectsLeethubRoute: ProjectsLeethubRoute,
   ProjectsM2mRoute: ProjectsM2mRoute,
   ProjectsMiniCollectionsRoute: ProjectsMiniCollectionsRoute,
+  ProjectsMonkeystashRoute: ProjectsMonkeystashRoute,
   ProjectsPasswinRoute: ProjectsPasswinRoute,
   ProjectsPersonalSiteRoute: ProjectsPersonalSiteRoute,
   ProjectsIndexRoute: ProjectsIndexRoute,
