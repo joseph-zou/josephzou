@@ -90,6 +90,10 @@
   @apply flex justify-center mb-3;
 }
 
+.project-pic {
+  @apply block max-w-full h-auto mx-auto rounded-xl shadow-lg;
+}
+
 .project-unordered-list {
   @apply list-disc ml-2 lg:ml-5 text-p;
 }

@@ -3,6 +3,7 @@ import useScrollToSection from "@/hooks/useScrollToSection";
 import SectionNavigator from "@/components/SectionNavigator";
 import type { Section } from "@/components/SectionNavigator";
 import { FaGithub, FaYoutube } from "react-icons/fa";
+import ImageCarousel from "@/components/ImageCarousel";
 
 export const Route = createFileRoute("/projects/m2m")({
   component: RouteComponent,
@@ -86,22 +87,24 @@ function RouteComponent() {
             </p>
           </div>
           <div className="project-section">
-            <p className="project-sub-subheading" id="video-demonstration">
-              Video Demonstration
+            <p className="project-sub-subheading" id="project-photos">
+              Project Photos
             </p>
             <div className="project-pics">
-              {/* <iframe
-                className="w-auto h-auto md:w-[48rem] md:h-[32rem]"
-                src="https://www.youtube.com/embed/FfB2ws_rVOg"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen={true}
+              <ImageCarousel
+                images={[
+                  "/images/M2M/5.png",
+                  "/images/M2M/1.png",
+                  "/images/M2M/2.png",
+                  "/images/M2M/3.png",
+                  "/images/M2M/4.png",
+                ]}
+              />
+              {/* <img
+                className="block max-w-full h-auto mx-auto rounded-xl shadow-lg"
+                src="/images/PassWin/authentication_pipeline.png"
               /> */}
             </div>
-            <p className="project-sub-subheading-paragraph text-center">
-              Check out this quick 1-minute video that showcases the solution.
-            </p>
           </div>
         </div>
         <div className="project-header" id="technical-features">

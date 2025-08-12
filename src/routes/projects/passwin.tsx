@@ -177,8 +177,8 @@ function RouteComponent() {
           </div>
           <div className="project-pics">
             <img
-              className="block max-w-full h-auto mx-auto"
-              src="/images/PasswordManager/authentication_pipeline.png"
+              className="project-pic"
+              src="/images/PassWin/authentication_pipeline.png"
             />
           </div>
           <div className="project-section">
