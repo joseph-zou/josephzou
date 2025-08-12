@@ -8,7 +8,7 @@ function RouteComponent() {
   return (
     <div className="w-screen h-screen m-0 p-0">
       <iframe
-        src="/Joseph_v2025_resume_0.1.0.pdf#zoom=100"
+        src="/Joseph_v2025_resume_0.2.0.pdf#zoom=100"
         className="w-full h-full border-none"
         title="Resume"
       ></iframe>
