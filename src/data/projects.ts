@@ -39,16 +39,6 @@ export const projectsCardData: ProjectCardData[] = [
     userCount: 1,
   },
   {
-    img: ComingSoon,
-    title: "A.I.fred",
-    description:
-      "A private, local assistant for advice, conversation, emails, reminders, calendars, and texts",
-    keywords: ["Ollama", "Local LLM"],
-    projectId: "alfred",
-    status: "inactive",
-    userCount: null,
-  },
-  {
     img: M2MImage,
     title: "Mother to Mother",
     description:
@@ -97,9 +87,26 @@ export const projectsCardData: ProjectCardData[] = [
     img: LeetHubImage,
     title: "LeetHub",
     description: "Automate putting solved Leetcode problems to Github.",
-    keywords: [],
+    keywords: [
+      "Redis",
+      "Docker",
+      "OAuth",
+      "Github Apps",
+      "Service Workers",
+      "Webhooks",
+    ],
     projectId: "leethub",
-    status: "dev",
+    status: "live",
+    userCount: 4,
+  },
+  {
+    img: ComingSoon,
+    title: "A.I.fred",
+    description:
+      "A private, local assistant for advice, conversation, emails, reminders, calendars, and texts",
+    keywords: ["Ollama", "Local LLM"],
+    projectId: "alfred",
+    status: "inactive",
     userCount: null,
   },
   {
