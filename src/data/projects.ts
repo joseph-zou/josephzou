@@ -98,7 +98,6 @@ export const projectsCardData: ProjectCardData[] = [
     projectId: "leethub",
     status: "live",
     userCount: 4,
-<<<<<<< HEAD
   },
   {
     img: ComingSoon,
@@ -109,8 +108,6 @@ export const projectsCardData: ProjectCardData[] = [
     projectId: "alfred",
     status: "inactive",
     userCount: null,
-=======
->>>>>>> 2aaaa28e9f43863bec2a93f526fce9bc8f0fc53c
   },
   {
     img: MonkeyStash,
