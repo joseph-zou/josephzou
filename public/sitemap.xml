@@ -3,18 +3,18 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
 >
   <url>
-    <loc>https://joseph-zou.github.io/</loc>
+    <loc>https://josephzou.vercel.app/</loc>
   </url>
   <url>
-    <loc>https://joseph-zou.github.io/projects</loc>
+    <loc>https://josephzou.vercel.app/projects</loc>
   </url>
   <url>
-    <loc>https://joseph-zou.github.io/about</loc>
+    <loc>https://josephzou.vercel.app/about</loc>
   </url>
     <url>
-    <loc>https://joseph-zou.github.io/gallery</loc>
+    <loc>https://josephzou.vercel.app/gallery</loc>
   </url>
     <url>
-    <loc>https://joseph-zou.github.io/resume</loc>
+    <loc>https://josephzou.vercel.app/resume</loc>
   </url>
 </urlset>
