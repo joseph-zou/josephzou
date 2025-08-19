@@ -164,7 +164,7 @@ function RouteComponent() {
               I manually created an authentication pipeline that utilizes
               sessions. Initially I was using access tokens but because of the
               lack of control I migrated over to using sessions. I found a
-              document on how Last Pass does there and used it as{" "}
+              document on how Last Pass did theirs and used it as{" "}
               <a
                 className="text-blue-500"
                 href="https://chenfengbao.com/lastpass-basics"

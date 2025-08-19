@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import useScrollToSection from "@/hooks/useScrollToSection";
 import SectionNavigator from "@/components/SectionNavigator";
 import type { Section } from "@/components/SectionNavigator";
-import { FaGithub, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaYoutube, FaChrome } from "react-icons/fa";
 export const Route = createFileRoute("/projects/leethub")({
   component: RouteComponent,
 });
@@ -32,7 +32,15 @@ function RouteComponent() {
           <p className="project-subheading project-github">
             <div className="flex gap-x-5 mt-3">
               <a
-                href="https://github.com/joseph-zou/Desktop-Pet-with-Tools"
+                href="https://chromewebstore.google.com/detail/leethub/acnehkolcgphijpcjnmkfmljcojpoepg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-p hover:text-black text-2xl"
+              >
+                <FaChrome />
+              </a>
+              <a
+                href="https://github.com/joseph-zou/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-p hover:text-black text-2xl"
