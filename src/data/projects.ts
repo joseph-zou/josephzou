@@ -128,6 +128,15 @@ export const projectsCardData: ProjectCardData[] = [
   //   userCount: null,
   // },
   {
+    img: ComingSoon,
+    title: "The Bois Hangout",
+    description: "Real time meeting and chat using mostly Django.",
+    keywords: ["Django", "Websockets", "WebRTC", "Channels"],
+    projectId: "bois",
+    status: "dev",
+    userCount: null,
+  },
+  {
     img: MinisCollectionImage,
     title: "Mini's Collections",
     description: "A collection of small projects.",
